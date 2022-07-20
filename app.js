@@ -60,3 +60,5 @@ tabs.addEventListener('click', (e) => {
     });
   }
 });
+
+// Local storage
