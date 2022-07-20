@@ -44,8 +44,8 @@ list.addEventListener('click', (e) => {
   }
 });
 
+// Add book
 const ul = document.querySelector('ul');
-
 const addBook = document.querySelector('#add-book');
 addBook.addEventListener('submit', (e) => {
   e.preventDefault();
