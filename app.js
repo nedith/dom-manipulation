@@ -44,26 +44,29 @@ list.addEventListener('click', (e) => {
 });
 
 // Add book
-const addBook = document.querySelector('#add-book');
-addBook.addEventListener('submit', (e) => {
+// const forms = document.forms;
+// const addForm = forms['add-book'];
+const addForm = document.querySelector('#add-book');
+addForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  const value = document.querySelector('#add-book input').value;
+  let value = document.querySelector('.add-book-input').value;
   const newBook = document.createElement('li');
   newBook.innerHTML = `<span class="name">${value}</span>
-	    			<span class="delete">delete</span>`;
-  // newBook.textContent = value;
+      			<span class="delete">delete</span>`;
+
+  // append to DOM
   list.appendChild(newBook);
 });
 
-// // hide books
-// const hideBox = document.querySelector('#hide');
-// hideBox.addEventListener('change', function (e) {
-//   if (hideBox.checked) {
-//     list.style.display = 'none';
-//   } else {
-//     list.style.display = 'initial';
-//   }
-// });
+// Hide books
+const hideBooks = document.querySelector('#hide');
+hideBooks.addEventListener('change', (e) => {
+  if (hideBooks.checked) {
+    list.style.display = 'none';
+  } else {
+    list.style.display = 'block';
+  }
+});
 
 // // filter books
 // const searchBar = forms['search-books'].querySelector('input');
